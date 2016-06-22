@@ -1,0 +1,1 @@
+{:name reagent.interop, :doc nil, :excludes #{}, :use-macros nil, :require-macros {reagent.interop reagent.interop}, :uses nil, :requires nil, :imports nil}
