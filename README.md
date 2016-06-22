@@ -3,12 +3,17 @@
 
 javascript build 
 
-`npm install & npm run build`
+```bash
+npm install & npm run build
+```
 
 clojurescript build (with fighweel)
 
-`lein fighweel`
+```bash
+lein fighweel
+```
 
-open `public/index.html' 
+open `public/index.html`
 
 Should see: 
+![yolandi](screenshot.png)
