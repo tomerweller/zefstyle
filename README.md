@@ -1,20 +1,22 @@
 #Zef Style
-### An experiment in importing React components from npm, via webpack, to a Clojurescript/Reagent app. 
+### An experiment in importing React components from npm, via webpack, to a Clojurescript/Reagent app. See [this blog post](http://blob.tomerweller.com/reagent-import-react-components-from-npm) for more details.
 
-javascript build 
+
+
+Javascript build:
 
 ```bash
 npm install & npm run build
 ```
 
-clojurescript build (with fighweel)
+Clojurescript build (with fighweel):
 
 ```bash
 lein fighweel
 ```
 
-open `public/index.html`
+Open `public/index.html`
 
-Should see: 
+You should see: 
 
 ![yolandi](screenshot.png)
