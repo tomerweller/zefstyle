@@ -16,4 +16,5 @@ lein fighweel
 open `public/index.html`
 
 Should see: 
+
 ![yolandi](screenshot.png)
