@@ -1,16 +1,15 @@
 (ns zefstyle.core
-    (:require [reagent.core :as reagent :refer [atom]]))
+  (:require [reagent.core :as reagent :refer [atom]]))
 
 ;; -------------------------
 ;; Views
 
 
-(def react-player (aget js/window "deps" "react-player"))
-
 (defn home-page []
-  [:div
-   [:h2 "Zef Style"]
-   [:> react-player {:url "https://youtu.be/uMK0prafzw0"}]])
+  (let [react-player (aget js/window "deps" "react-player")]
+    [:div
+     [:h2 "Zef Style"]
+     [:> react-player {:url "https://youtu.be/uMK0prafzw0"}]]))
 
 ;; -------------------------
 ;; Initialize app

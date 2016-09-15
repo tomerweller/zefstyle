@@ -1,7 +1,6 @@
 {
   "name": "zefstyle",
   "version": "0.0.1",
-  "main": "index.js",
   "author": "tomer.weller@gmail.com",
   "scripts": {
     "watch": "webpack -d --watch",
