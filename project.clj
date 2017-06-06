@@ -5,18 +5,18 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
-                 [org.clojure/clojurescript "1.9.36" :scope "provided"]
-                 [reagent "0.6.0-rc" :exclusions [cljsjs/react cljsjs/react-dom]]]
+                 [org.clojure/clojurescript "1.9.562" :scope "provided"]
+                 [reagent "0.6.2" :exclusions [cljsjs/react cljsjs/react-dom]]]
 
-  :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-figwheel "0.5.4-SNAPSHOT"]]
+  :plugins [[lein-cljsbuild "1.1.6"]
+            [lein-figwheel "0.5.10"]]
 
   :min-lein-version "2.5.0"
 
   :clean-targets ^{:protect false}
-  [:target-path
-   [:cljsbuild :builds :app :compiler :output-dir]
-   [:cljsbuild :builds :app :compiler :output-to]]
+[:target-path
+ [:cljsbuild :builds :app :compiler :output-dir]
+ [:cljsbuild :builds :app :compiler :output-to]]
 
   :resource-paths ["public"]
 
@@ -28,21 +28,25 @@
   :cljsbuild {:builds {:app
                        {:source-paths ["src" "env/dev/cljs"]
                         :compiler
-                        {:main "zefstyle.dev"
-                         :output-to "public/js/app.js"
-                         :output-dir "public/js/out"
-                         :asset-path   "js/out"
-                         :source-map true
-                         :optimizations :none
-                         :pretty-print  true}}
+                                      {:main "zefstyle.dev"
+                                       :output-to "public/js/app.js"
+                                       :output-dir "public/js/out"
+                                       :asset-path   "js/out"
+                                       :source-map true
+                                       :foreign-libs [{:file "public/js/bundle.js"
+                                                       :provides ["cljsjs.react" "cljsjs.react.dom" "webpack.bundle"]}]
+                                       :optimizations :none
+                                       :pretty-print  true}}
                        :release
                        {:source-paths ["src" "env/prod/cljs"]
                         :compiler
-                        {:output-to "public/js/app.js"
-                         :output-dir "public/js/release"
-                         :asset-path   "js/out"
-                         :optimizations :advanced
-                         :pretty-print false}}}}
+                                      {:output-to "public/js/app.js"
+                                       :output-dir "public/js/release"
+                                       :asset-path   "js/out"
+                                       :optimizations :advanced
+                                       :foreign-libs [{:file "public/js/bundle.js"
+                                                       :provides ["cljsjs.react" "cljsjs.react.dom" "webpack.bundle"]}]
+                                       :pretty-print false}}}}
 
   :aliases {"release" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
