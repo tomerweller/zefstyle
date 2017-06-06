@@ -1,15 +1,15 @@
 {
   "name": "zefstyle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "tomer.weller@gmail.com",
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack -p"
   },
   "dependencies": {
-    "react": "15.1.0",
-    "react-dom": "15.1.0",
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
     "webpack": "1.13.1",
-    "react-player": "0.7.3"
+    "react-player": "0.18.0"
   }
 }
