@@ -16,4 +16,5 @@ pom.xml.asc
 /node_modules
 *.iml
 /.idea
-
+.DS_Store
+/public/js
