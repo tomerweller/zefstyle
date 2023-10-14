@@ -1,8 +1,7 @@
-window.deps = {
-    'react' : require('react'),
-    'react-dom' : require('react-dom'),
-    'react-player' : require('react-player'),
-};
+import React from "react";
+import ReactDOM from "react-dom";
+import ReactPlayer from "react-player";
 
-window.React = window.deps['react'];
-window.ReactDOM = window.deps['react-dom'];
+window.React = React;
+window.ReactDOM = ReactDOM;
+window.ReactPlayer = ReactPlayer;

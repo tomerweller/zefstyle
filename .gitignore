@@ -18,3 +18,5 @@ pom.xml.asc
 /.idea
 .DS_Store
 /public/js
+/.rebel_readline_history
+
